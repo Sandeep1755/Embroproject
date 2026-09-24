@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Interio by Godrej — Furniture Designed for the Way You Live</title>
+<meta name="description" content="Explore stylish, functional and durable furniture for modern Indian homes. Sofas, beds, wardrobes, dining sets, study tables and mattresses from Interio by Godrej." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#f5f0ea',
+        sand: '#ebe3d8',
+        ink: '#141210',
+        graphite: '#2b2724',
+        gold: '#a8814c',
+        moss: '#28a745',
+      },
+      fontFamily: {
+        display: ['Fraunces', 'serif'],
+        sans: ['Manrope', 'sans-serif'],
+      },
+      boxShadow: {
+        soft: '0 20px 60px -20px rgba(20,18,16,.18)',
+        card: '0 8px 30px -12px rgba(20,18,16,.14)',
+      },
+    },
+  },
+};
+</script>
+<style>
+  ::selection { background:#a8814c; color:#fff; }
+  .hide-scrollbar::-webkit-scrollbar { display:none; }
+  .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+  .reveal { opacity:0; transform:translateY(28px); transition:opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+  .reveal.in { opacity:1; transform:none; }
+  .underline-hover { position:relative; }
+  .underline-hover::after { content:''; position:absolute; left:0; bottom:-4px; height:1px; width:0; background:currentColor; transition:width .35s ease; }
+  .underline-hover:hover::after { width:100%; }
+  .nav-link.active { color:#a8814c; }
+  #switchTabs .switch-tab { color:rgba(20,18,16,.55); cursor:pointer; }
+  #switchTabs .switch-tab:hover { color:#a8814c; }
+  #switchTabs .switch-tab.active,
+  #switchTabs .switch-tab.active:hover { color:#f5f0ea; background:#141210; }
+</style>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+
+<!-- ══════════ TOP UTILITY BAR ══════════ -->
+<div class="hidden lg:block bg-ink text-cream/80 text-[13px]">
+  <div class="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-between">
+    <div class="flex gap-7">
+      <a href="#" class="hover:text-gold transition">Become a dealer</a>
+      <a href="#" class="hover:text-gold transition">Store locator</a>
+      <a href="#" class="hover:text-gold transition">Contact us</a>
+      <a href="#" class="hover:text-gold transition">Services</a>
+    </div>
+    <div class="flex items-center gap-4 text-xs">
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-moss"></span> Free delivery on orders above ₹5,000</span>
+      <span class="w-px h-3 bg-cream/25"></span>
+      <a href="#" class="hover:text-gold transition">Care: 080-67436743</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ HEADER ══════════ -->
+<header id="header" class="sticky top-0 z-50 bg-cream/90 backdrop-blur-xl border-b border-ink/10 transition-shadow">
+  <div class="mx-auto max-w-[1400px] px-4 sm:px-6">
+    <div class="h-16 sm:h-20 flex items-center justify-between gap-4">
+
+      <!-- switcher tabs + logo -->
+      <div class="flex items-center gap-4 sm:gap-6">
+        <div class="relative shrink-0" id="modeSwitcher">
+          <div class="grid grid-cols-2 rounded-full overflow-hidden border border-ink/20 bg-white text-[11px] sm:text-xs font-semibold" id="switchTabs">
+            <button type="button" class="switch-tab active px-3 sm:px-5 py-2 text-center transition-colors duration-300" data-mode="home">For Homes</button>
+            <button type="button" class="switch-tab px-3 sm:px-5 py-2 text-center transition-colors duration-300" data-mode="business" id="businessTab">For Businesses
+              <svg class="w-2.5 h-2.5 inline-block ml-0.5 opacity-50" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+          </div>
+          <div id="businessMenu" class="hidden absolute left-0 top-full mt-2 w-64 rounded-2xl bg-white shadow-soft border border-ink/10 p-3 z-50 max-h-96 overflow-y-auto space-y-2">
+            <a href="index.html#aluminium-doors" data-tab="aluminium-doors" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Aluminium System Doors & Windows</a>
+            <a href="index.html#upvc-doors" data-tab="upvc-doors" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">uPVC Doors & Windows</a>
+            <a href="index.html#kitchens" data-tab="kitchens" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Kitchens</a>
+            <a href="index.html#custom-wardrobes" data-tab="custom-wardrobes" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Wardrobes</a>
+            <a href="index.html#tv-consoles" data-tab="tv-consoles" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">TV Consoles</a>
+            <a href="index.html#vanities" data-tab="vanities" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Bathroom Vanities</a>
+            <a href="index.html#wall-paneling" data-tab="wall-paneling" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Wall Panelling</a>
+            <a href="index.html#flooring" data-tab="flooring" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Flooring</a>
+            <a href="index.html#home-theater" data-tab="home-theater" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Home Theater</a>
+            <a href="index.html#appliances" data-tab="appliances" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Appliances</a>
+            <a href="index.html#corian" data-tab="corian" class="business-menu-link block px-3 py-2.5 rounded-lg hover:bg-ink/5 text-sm transition">Corian Work</a>
+          </div>
+        </div>
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <span class="w-9 h-9 sm:w-10 sm:h-10 bg-ink text-cream grid place-items-center font-display text-lg group-hover:bg-gold transition-colors">I</span>
+          <span class="leading-none">
+            <span class="block font-display text-xl sm:text-2xl tracking-tight">Interio</span>
+            <span class="block text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-ink/50">by Godrej</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- desktop nav -->
+      <nav class="hidden lg:flex items-center gap-7 text-[14px] font-medium" id="desktopNav">
+        <a href="living-room.html" class="hover:text-gold transition">Living room</a>
+        <a href="bedroom.html" class="hover:text-gold transition">Bedroom</a>
+        <a href="index.html#categories" class="hover:text-gold transition">Dining room</a>
+        <a href="index.html#categories" class="hover:text-gold transition">Office & Study</a>
+        <a href="index.html#collections" class="hover:text-gold transition">Modular Kitchens</a>
+        <a href="index.html#products" class="hover:text-gold transition">All Products</a>
+        <a href="index.html#offer" class="text-moss font-semibold hover:opacity-80 transition">Offers</a>
+      </nav>
+
+      <!-- actions -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        <button aria-label="Search" class="w-10 h-10 grid place-items-center rounded-full hover:bg-ink/5 transition">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+        <button aria-label="Account" class="hidden sm:grid w-10 h-10 place-items-center rounded-full hover:bg-ink/5 transition">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+        </button>
+        <button aria-label="Wishlist" class="hidden sm:grid w-10 h-10 place-items-center rounded-full hover:bg-ink/5 transition relative">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7.5-4.7-9.3-9C1.4 8.6 3.4 5 7 5c2 0 3.6 1.2 5 3 1.4-1.8 3-3 5-3 3.6 0 5.6 3.6 4.3 7-1.8 4.3-9.3 9-9.3 9z"/></svg>
+        </button>
+        <button aria-label="Cart" class="w-10 h-10 grid place-items-center rounded-full hover:bg-ink/5 transition relative">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1.2 12.2a2 2 0 01-2 1.8H9.2a2 2 0 01-2-1.8L6 7z"/><path d="M9 7a3 3 0 016 0"/></svg>
+          <span class="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-gold text-white text-[10px] font-bold grid place-items-center">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- B2B mode banner -->
+<div id="b2bBar" class="hidden bg-gold text-white">
+  <div class="mx-auto max-w-[1400px] px-6 py-3 flex items-center justify-between gap-4">
+    <p class="text-xs sm:text-sm"><strong>Interio for Business.</strong> <span class="text-white/85">Bulk pricing, GST invoices &amp; priority delivery for offices and projects.</span></p>
+    <a href="#" class="shrink-0 px-4 py-1.5 bg-ink text-cream text-xs font-semibold rounded-full hover:bg-cream hover:text-ink transition">Enquire now</a>
+  </div>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="relative min-h-[70vh] flex items-center overflow-hidden bg-ink">
+  <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2000&q=80"
+       alt="Modern thoughtfully furnished home interior" class="absolute inset-0 w-full h-full object-cover opacity-50" fetchpriority="high">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/30"></div>
+  <div class="relative mx-auto max-w-[1400px] w-full px-6 py-24 sm:py-32">
+    <p class="reveal text-gold text-xs sm:text-sm tracking-[0.35em] uppercase mb-5">Interio by Godrej</p>
+    <h1 class="reveal font-display text-white text-5xl sm:text-6xl lg:text-7xl font-light max-w-4xl leading-[1.02]">Furniture Designed for the Way You Live</h1>
+    <p class="reveal mt-6 max-w-2xl text-cream/80 text-base sm:text-lg leading-relaxed">Stylish, functional &amp; durable furniture for modern Indian homes — designed around every room, every routine and every stage of life.</p>
+    <div class="reveal mt-9 flex flex-wrap gap-4">
+      <a href="index.html#products" class="px-8 py-4 bg-cream text-ink text-sm font-semibold tracking-wide rounded-full hover:bg-gold hover:text-white transition-colors">Shop furniture online</a>
+      <a href="#collections" class="px-8 py-4 border border-cream/40 text-cream text-sm font-semibold tracking-wide rounded-full hover:bg-cream/10 backdrop-blur transition">Explore collections</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ INTRO ══════════ -->
+<section class="py-20 sm:py-24">
+  <div class="mx-auto max-w-[1400px] px-6">
+    <div class="max-w-3xl reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">About the collection</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-light leading-[1.05]">Your home should feel comfortable, look beautiful and work effortlessly.</h2>
+      <p class="mt-6 text-ink/60 leading-relaxed">At Interio by Godrej, you can explore thoughtfully designed furniture for every room, every routine and every stage of life. From comfortable sofas and spacious beds to practical wardrobes, dining sets, study tables and mattresses, discover furniture that brings together contemporary design, everyday functionality and lasting quality.</p>
+      <div class="mt-8 flex flex-wrap gap-3 text-sm">
+        <a href="index.html#products" class="px-5 py-2.5 border border-ink/20 rounded-full hover:border-ink transition">Shop Furniture Online</a>
+        <a href="index.html#collections" class="px-5 py-2.5 border border-ink/20 rounded-full hover:border-ink transition">Explore Collections</a>
+        <a href="#" class="px-5 py-2.5 border border-ink/20 rounded-full hover:border-ink transition">Find a Store</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EVERY ROOM ══════════ -->
+<section class="pb-20 sm:pb-24">
+  <div class="mx-auto max-w-[1400px] px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Every room</p>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-light">Find Furniture for Every Room</h2>
+      <p class="mt-4 text-ink/55 text-sm">Whether you are furnishing a new home, refreshing a room or simply replacing an old piece, find furniture designed around the way you live.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="rounded-3xl overflow-hidden bg-white shadow-card reveal">
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80" alt="Living room furniture" class="w-full h-full object-cover">
+          <span class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></span>
+          <span class="absolute bottom-4 left-6 text-white font-display text-2xl">Living Room</span>
+        </div>
+        <div class="p-8">
+          <p class="text-sm text-ink/60 leading-relaxed">Create a living room that feels welcoming from the moment you walk in. Explore sofas, recliners, sofa beds, L-shaped sofas, coffee tables, TV units, cabinets and more.</p>
+          <p class="mt-4 text-sm text-ink/60 leading-relaxed">Choose from different styles, sizes, materials and configurations to create a living space that works for everyday relaxation as well as special moments with family and friends.</p>
+          <a href="living-room.html" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Explore Living Room Furniture</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden bg-white shadow-card reveal">
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=80" alt="Bedroom furniture" class="w-full h-full object-cover">
+          <span class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></span>
+          <span class="absolute bottom-4 left-6 text-white font-display text-2xl">Bedroom</span>
+        </div>
+        <div class="p-8">
+          <p class="text-sm text-ink/60 leading-relaxed">Turn your bedroom into a comfortable and organised space. Explore king-size beds, queen-size beds, single beds, wooden wardrobes, steel almirahs, mattresses, bedside tables, dressing tables, lockers and other bedroom essentials.</p>
+          <p class="mt-4 text-sm text-ink/60 leading-relaxed">Whether you need additional storage or want to create a more relaxing bedroom, find furniture designed to make everyday living easier.</p>
+          <a href="bedroom.html" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Explore Bedroom Furniture</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden bg-white shadow-card reveal">
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=900&q=80" alt="Dining room furniture" class="w-full h-full object-cover">
+          <span class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></span>
+          <span class="absolute bottom-4 left-6 text-white font-display text-2xl">Dining Room</span>
+        </div>
+        <div class="p-8">
+          <p class="text-sm text-ink/60 leading-relaxed">Make everyday meals and family gatherings more enjoyable with dining furniture designed for comfort and functionality. Explore dining tables, dining chairs, dining sets and benches in different sizes and styles to suit your home.</p>
+          <a href="index.html#categories" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Explore Dining Furniture</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden bg-white shadow-card reveal">
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=900&q=80" alt="Office and study furniture" class="w-full h-full object-cover">
+          <span class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></span>
+          <span class="absolute bottom-4 left-6 text-white font-display text-2xl">Office &amp; Study</span>
+        </div>
+        <div class="p-8">
+          <p class="text-sm text-ink/60 leading-relaxed">A productive workspace starts with the right furniture. Explore office chairs, work desks, study tables and practical workspace solutions designed for comfort and everyday use.</p>
+          <p class="mt-4 text-sm text-ink/60 leading-relaxed">Whether you are setting up a home office, study area or professional workspace, find furniture that supports the way you work.</p>
+          <a href="index.html#categories" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Explore Office &amp; Study Furniture</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WORKS AROUND YOU ══════════ -->
+<section class="bg-ink text-cream py-20 sm:py-28">
+  <div class="mx-auto max-w-[1400px] px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Our approach</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-light leading-tight">Furniture That Works Around You</h2>
+      <p class="mt-5 text-cream/70 leading-relaxed">Good furniture is not only about how it looks. It should fit your space, support your routine and make everyday tasks easier.</p>
+      <p class="mt-4 text-cream/70 leading-relaxed">At Interio by Godrej, products are designed with a balance of aesthetics, functionality, comfort and durability. From storage solutions that help keep your home organised to ergonomic furniture designed around everyday use, every piece is created with real-life needs in mind.</p>
+      <p class="mt-4 text-cream/70 leading-relaxed">With a wide selection of furniture, finishes, sizes and configurations, you can find options that suit different spaces and lifestyles.</p>
+      <a href="index.html#products" class="mt-8 inline-block px-8 py-4 bg-gold text-white text-sm font-semibold rounded-full hover:bg-cream hover:text-ink transition">Explore All Furniture</a>
+    </div>
+    <div class="relative rounded-3xl overflow-hidden min-h-[340px] reveal">
+      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=80" alt="Furniture designed around everyday life" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ COLLECTION ══════════ -->
+<section id="collections" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-[1400px] px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Categories</p>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-light">Explore Our Furniture Collection</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="rounded-3xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-2xl">Sofas &amp; Recliners</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Bring comfort into your living room with sofas and recliners available in different styles, sizes and materials.</p>
+        <ul class="mt-4 space-y-2 text-sm text-ink/70">
+          <li>Sofa sets</li>
+          <li>3-seater sofas</li>
+          <li>L-shaped sofas</li>
+          <li>Recliner sofas</li>
+          <li>Sofa-cum-beds</li>
+          <li>Lounge seating</li>
+        </ul>
+        <a href="living-room.html" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Shop Sofas &amp; Recliners</a>
+      </div>
+
+      <div class="rounded-3xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-2xl">Beds</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Create a comfortable bedroom with beds designed for everyday use and practical storage.</p>
+        <ul class="mt-4 space-y-2 text-sm text-ink/70">
+          <li>King-size beds</li>
+          <li>Queen-size beds</li>
+          <li>Single beds</li>
+          <li>Storage beds</li>
+          <li>Hydraulic storage beds</li>
+          <li>Wooden beds</li>
+        </ul>
+        <a href="bedroom.html#beds" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Shop Beds</a>
+      </div>
+
+      <div class="rounded-3xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-2xl">Wardrobes &amp; Almirahs</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Keep your clothes, accessories and everyday essentials organised with practical storage furniture.</p>
+        <ul class="mt-4 space-y-2 text-sm text-ink/70">
+          <li>Wooden wardrobes</li>
+          <li>Steel almirahs</li>
+          <li>2-door wardrobes</li>
+          <li>3-door wardrobes</li>
+          <li>4-door wardrobes</li>
+          <li>Sliding wardrobes</li>
+        </ul>
+        <a href="bedroom.html#wardrobes" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Shop Wardrobes &amp; Almirahs</a>
+      </div>
+
+      <div class="rounded-3xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-2xl">Mattresses</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">A comfortable bedroom starts with the right mattress. Explore mattress options designed for different sleeping preferences and room requirements.</p>
+        <a href="index.html#categories" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Shop Mattresses</a>
+      </div>
+
+      <div class="rounded-3xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-2xl">Dining Furniture</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Bring everyone together around a dining space designed for everyday meals and celebrations. Explore dining tables, dining chairs, dining sets and benches.</p>
+        <a href="index.html#categories" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Shop Dining Furniture</a>
+      </div>
+
+      <div class="rounded-3xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-2xl">Tables &amp; Cabinets</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Complete your home with functional furniture for work, storage and everyday living. Explore coffee tables, study tables, work desks, TV units, display units, cabinets and more.</p>
+        <a href="index.html#products" class="mt-6 inline-block text-sm font-semibold text-gold underline-hover">Explore Tables &amp; Cabinets</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WHY CHOOSE ══════════ -->
+<section class="py-20 sm:py-28 bg-sand">
+  <div class="mx-auto max-w-[1400px] px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Why us</p>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-light">Why Choose Interio by Godrej?</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="rounded-2xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-xl">Designed for Modern Indian Spaces</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Furniture should work with the way Indian homes and workplaces are actually used. Interio focuses on combining contemporary aesthetics with practical functionality and comfort.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-xl">Built Around Everyday Functionality</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">From storage beds and spacious wardrobes to ergonomic chairs and practical tables, every product is designed to solve everyday needs.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-xl">Designed With Quality in Mind</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Furniture is developed with attention to materials, engineering, craftsmanship and durability, helping you choose pieces made for everyday use.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-xl">Personalised Choices</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Different homes have different needs. Explore furniture in different sizes, finishes, configurations and styles to find options that suit your space.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-xl">Sustainability Matters</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Interio incorporates sustainability into product design, materials, manufacturing and product lifecycle initiatives, with a focus on reducing environmental impact.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-8 shadow-card reveal">
+        <h3 class="font-display text-xl">Available Across India</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">With a wide retail presence and online shopping options, Interio makes it easier to explore furniture across India — servicing 17,000 pin codes with 1,000 stores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ BUYING GUIDE ══════════ -->
+<section class="py-20 sm:py-28">
+  <div class="mx-auto max-w-[1400px] px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative rounded-3xl overflow-hidden min-h-[340px] order-2 lg:order-1 reveal">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Interio store experience" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
+    </div>
+    <div class="order-1 lg:order-2 reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Buying guide</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-light leading-tight">Looking for Furniture Online?</h2>
+      <p class="mt-5 text-ink/60 leading-relaxed">Shopping for furniture is a long-term decision. You want something that looks right in your space, feels comfortable to use and offers the functionality you need. That's why it helps to consider more than just appearance.</p>
+      <ul class="mt-7 space-y-4">
+        <li class="flex gap-4"><span class="shrink-0 w-9 h-9 rounded-full bg-ink text-cream grid place-items-center text-sm font-semibold">1</span><div><h3 class="font-medium">Space</h3><p class="text-sm text-ink/55">Choose furniture according to the size and layout of your room.</p></div></li>
+        <li class="flex gap-4"><span class="shrink-0 w-9 h-9 rounded-full bg-ink text-cream grid place-items-center text-sm font-semibold">2</span><div><h3 class="font-medium">Function</h3><p class="text-sm text-ink/55">Consider how you will use the furniture every day.</p></div></li>
+        <li class="flex gap-4"><span class="shrink-0 w-9 h-9 rounded-full bg-ink text-cream grid place-items-center text-sm font-semibold">3</span><div><h3 class="font-medium">Storage</h3><p class="text-sm text-ink/55">Look for smart storage options when organisation is important.</p></div></li>
+        <li class="flex gap-4"><span class="shrink-0 w-9 h-9 rounded-full bg-ink text-cream grid place-items-center text-sm font-semibold">4</span><div><h3 class="font-medium">Comfort</h3><p class="text-sm text-ink/55">For sofas, beds and chairs, comfort should be part of the decision.</p></div></li>
+        <li class="flex gap-4"><span class="shrink-0 w-9 h-9 rounded-full bg-ink text-cream grid place-items-center text-sm font-semibold">5</span><div><h3 class="font-medium">Material</h3><p class="text-sm text-ink/55">Choose materials and finishes that suit your lifestyle and maintenance preferences.</p></div></li>
+        <li class="flex gap-4"><span class="shrink-0 w-9 h-9 rounded-full bg-ink text-cream grid place-items-center text-sm font-semibold">6</span><div><h3 class="font-medium">Style</h3><p class="text-sm text-ink/55">Select designs that complement the overall look of your home.</p></div></li>
+      </ul>
+      <a href="index.html#products" class="mt-8 inline-block px-8 py-4 bg-ink text-cream text-sm font-semibold rounded-full hover:bg-gold transition">Shop Furniture Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EVERY MOMENT ══════════ -->
+<section class="bg-ink text-cream py-20 sm:py-28">
+  <div class="mx-auto max-w-[1400px] px-6">
+    <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Moments</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-light">Furniture for Every Moment</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center reveal">
+      <div><p class="font-display text-gold text-4xl mb-3">🛋️</p><p class="text-sm text-cream/75 leading-relaxed">A sofa where conversations continue long after dinner.</p></div>
+      <div><p class="font-display text-gold text-4xl mb-3">🍽️</p><p class="text-sm text-cream/75 leading-relaxed">A dining table where the whole family comes together.</p></div>
+      <div><p class="font-display text-gold text-4xl mb-3">🛏️</p><p class="text-sm text-cream/75 leading-relaxed">A bed that makes the end of a long day feel better.</p></div>
+      <div><p class="font-display text-gold text-4xl mb-3">📖</p><p class="text-sm text-cream/75 leading-relaxed">A study table where ideas take shape.</p></div>
+      <div><p class="font-display text-gold text-4xl mb-3">🗄️</p><p class="text-sm text-cream/75 leading-relaxed">A wardrobe that keeps everyday life organised.</p></div>
+    </div>
+    <p class="mt-12 text-center max-w-2xl mx-auto text-cream/70 leading-relaxed reveal">Furniture becomes part of the moments that make a house feel like home. At Interio by Godrej, our goal is to create products that support these everyday experiences through thoughtful design, functionality and durability.</p>
+  </div>
+</section>
+
+<!-- ══════════ DUAL CTA ══════════ -->
+<section class="py-20 sm:py-28">
+  <div class="mx-auto max-w-[1400px] px-6 grid md:grid-cols-2 gap-5">
+    <div class="relative rounded-3xl overflow-hidden min-h-[340px] group reveal">
+      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80" alt="Modular kitchen" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/85 to-ink/10"></div>
+      <div class="relative p-8 sm:p-10 h-full flex flex-col justify-end text-white">
+        <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-2">Modular kitchens</p>
+        <h3 class="font-display text-3xl sm:text-4xl font-light">Looking for a New Modular Kitchen?</h3>
+        <p class="mt-2 text-white/70 text-sm max-w-sm">Explore modular kitchen solutions designed around functionality, storage and contemporary aesthetics. Consultation services available.</p>
+        <a href="#" class="mt-5 self-start px-7 py-3.5 bg-cream text-ink text-sm font-semibold rounded-full group-hover:bg-gold group-hover:text-white transition">Book a Consultation</a>
+      </div>
+    </div>
+    <div class="relative rounded-3xl overflow-hidden min-h-[340px] group reveal">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80" alt="Home interiors" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/85 to-ink/10"></div>
+      <div class="relative p-8 sm:p-10 h-full flex flex-col justify-end text-white">
+        <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-2">Home interiors</p>
+        <h3 class="font-display text-3xl sm:text-4xl font-light">Want to Design Your Space?</h3>
+        <p class="mt-2 text-white/70 text-sm max-w-sm">From planning and design to furniture and execution, discover end-to-end interior solutions for your space and lifestyle.</p>
+        <a href="#" class="mt-5 self-start px-7 py-3.5 bg-cream text-ink text-sm font-semibold rounded-full group-hover:bg-gold group-hover:text-white transition">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ONLINE CONFIDENCE ══════════ -->
+<section class="py-20 sm:py-24 bg-white">
+  <div class="mx-auto max-w-[1400px] px-6 text-center">
+    <div class="max-w-2xl mx-auto reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Online</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-light">Shop Furniture Online With Confidence</h2>
+      <p class="mt-5 text-ink/55 leading-relaxed">Finding the right furniture should be simple. Browse products online, compare styles and configurations, check product details and select furniture according to your space and requirements.</p>
+      <p class="mt-4 text-ink/55 leading-relaxed">Whether you are looking for a new sofa, bed, wardrobe, dining set, mattress, study table or office chair, you can explore a wide range of furniture options in one place.</p>
+      <a href="index.html#products" class="mt-8 inline-block px-8 py-4 bg-ink text-cream text-sm font-semibold rounded-full hover:bg-gold transition">Explore All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STORE CTA ══════════ -->
+<section class="py-20 sm:py-24">
+  <div class="mx-auto max-w-[1400px] px-6">
+    <div class="rounded-3xl overflow-hidden grid lg:grid-cols-2 bg-ink text-cream reveal">
+      <div class="p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
+        <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">In store</p>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-light">Visit an Interio Store Near You</h2>
+        <p class="mt-4 text-cream/60 text-sm leading-relaxed max-w-md">Sometimes you want to see the furniture before making a decision. Visit an Interio store to experience the products in person, understand finishes and materials, compare options and speak with the team about your requirements.</p>
+        <a href="#" class="mt-8 self-start px-8 py-4 bg-gold text-white text-sm font-semibold rounded-full hover:bg-cream hover:text-ink transition">Find a Store Near You</a>
+      </div>
+      <div class="relative min-h-[260px] lg:min-h-[440px]">
+        <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1200&q=80" alt="Interio store" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent lg:from-ink/50"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="py-20 sm:py-28 bg-sand">
+  <div class="mx-auto max-w-[1400px] px-6 grid lg:grid-cols-[1fr_1.4fr] gap-12">
+    <div class="reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Support</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-light leading-tight">Frequently Asked Questions</h2>
+      <p class="mt-4 text-ink/55 text-sm max-w-sm">Answers to the questions customers ask us most often — from products and delivery to stores and online shopping.</p>
+    </div>
+
+    <div class="divide-y divide-ink/10 border-y border-ink/10" id="faq">
+      <div class="faq-item">
+        <button class="w-full flex items-center justify-between gap-6 py-6 text-left">
+          <span class="font-medium text-[15px] sm:text-base">What types of furniture can I buy from Interio by Godrej?</span>
+          <span class="faq-icon w-8 h-8 shrink-0 rounded-full border border-ink/20 grid place-items-center transition-transform">+</span>
+        </button>
+        <div class="faq-body hidden pb-6 text-sm text-ink/60 leading-relaxed max-w-2xl">Interio offers furniture for living rooms, bedrooms, dining rooms, offices and study spaces. The collection includes sofas, recliners, beds, wardrobes, almirahs, mattresses, dining sets, tables, chairs, cabinets, lockers and other furniture solutions.</div>
+      </div>
+      <div class="faq-item">
+        <button class="w-full flex items-center justify-between gap-6 py-6 text-left">
+          <span class="font-medium text-[15px] sm:text-base">Can I buy furniture online from Interio?</span>
+          <span class="faq-icon w-8 h-8 shrink-0 rounded-full border border-ink/20 grid place-items-center transition-transform">+</span>
+        </button>
+        <div class="faq-body hidden pb-6 text-sm text-ink/60 leading-relaxed max-w-2xl">Yes. Interio's website allows customers to explore and purchase a wide range of furniture online, including sofas, beds, wardrobes, dining furniture, mattresses, tables and chairs.</div>
+      </div>
+      <div class="faq-item">
+        <button class="w-full flex items-center justify-between gap-6 py-6 text-left">
+          <span class="font-medium text-[15px] sm:text-base">Does Interio offer bedroom furniture?</span>
+          <span class="faq-icon w-8 h-8 shrink-0 rounded-full border border-ink/20 grid place-items-center transition-transform">+</span>
+        </button>
+        <div class="faq-body hidden pb-6 text-sm text-ink/60 leading-relaxed max-w-2xl">Yes. Interio's bedroom furniture range includes beds, wardrobes, almirahs, mattresses, tables, lockers, chairs and other bedroom essentials.</div>
+      </div>
+      <div class="faq-item">
+        <button class="w-full flex items-center justify-between gap-6 py-6 text-left">
+          <span class="font-medium text-[15px] sm:text-base">What types of sofas are available?</span>
+          <span class="faq-icon w-8 h-8 shrink-0 rounded-full border border-ink/20 grid place-items-center transition-transform">+</span>
+        </button>
+        <div class="faq-body hidden pb-6 text-sm text-ink/60 leading-relaxed max-w-2xl">The collection includes sofa sets, 3-seater sofas, recliner sofas, sofa-cum-beds and L-shaped or corner sofas, among other seating options.</div>
+      </div>
+      <div class="faq-item">
+        <button class="w-full flex items-center justify-between gap-6 py-6 text-left">
+          <span class="font-medium text-[15px] sm:text-base">Does Interio offer modular kitchen solutions?</span>
+          <span class="faq-icon w-8 h-8 shrink-0 rounded-full border border-ink/20 grid place-items-center transition-transform">+</span>
+        </button>
+        <div class="faq-body hidden pb-6 text-sm text-ink/60 leading-relaxed max-w-2xl">Yes. Interio provides modular kitchen solutions and offers consultation options for customers planning a new kitchen.</div>
+      </div>
+      <div class="faq-item">
+        <button class="w-full flex items-center justify-between gap-6 py-6 text-left">
+          <span class="font-medium text-[15px] sm:text-base">Where can I find an Interio store?</span>
+          <span class="faq-icon w-8 h-8 shrink-0 rounded-full border border-ink/20 grid place-items-center transition-transform">+</span>
+        </button>
+        <div class="faq-body hidden pb-6 text-sm text-ink/60 leading-relaxed max-w-2xl">Interio has stores across multiple cities in India. Customers can use the store locator to find a nearby location and experience the furniture in person.</div>
+      </div>
+      <div class="faq-item">
+        <button class="w-full flex items-center justify-between gap-6 py-6 text-left">
+          <span class="font-medium text-[15px] sm:text-base">Does Interio provide furniture for offices?</span>
+          <span class="faq-icon w-8 h-8 shrink-0 rounded-full border border-ink/20 grid place-items-center transition-transform">+</span>
+        </button>
+        <div class="faq-body hidden pb-6 text-sm text-ink/60 leading-relaxed max-w-2xl">Yes. Interio has a dedicated business range that includes office furniture and workspace solutions, along with products for institutional and commercial environments.</div>
+      </div>
+      <div class="faq-item">
+        <button class="w-full flex items-center justify-between gap-6 py-6 text-left">
+          <span class="font-medium text-[15px] sm:text-base">What should I consider before buying furniture online?</span>
+          <span class="faq-icon w-8 h-8 shrink-0 rounded-full border border-ink/20 grid place-items-center transition-transform">+</span>
+        </button>
+        <div class="faq-body hidden pb-6 text-sm text-ink/60 leading-relaxed max-w-2xl">Consider your room size, available space, furniture dimensions, functionality, storage requirements, material, finish, comfort and overall design before purchasing furniture.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FINAL CTA ══════════ -->
+<section class="py-20 sm:py-28">
+  <div class="mx-auto max-w-[1400px] px-6 text-center">
+    <div class="max-w-2xl mx-auto reveal">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">Your space</p>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-light">Create a Space That Feels Like You</h2>
+      <p class="mt-5 text-ink/55 leading-relaxed">Your furniture should not simply fill a room. It should make the room more comfortable, more functional and more yours. Explore furniture designed for modern Indian homes and workspaces with Interio by Godrej.</p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4">
+        <a href="index.html#products" class="px-8 py-4 bg-ink text-cream text-sm font-semibold rounded-full hover:bg-gold transition">Shop Furniture Online</a>
+        <a href="index.html#collections" class="px-8 py-4 border border-ink text-sm font-semibold rounded-full hover:bg-ink hover:text-cream transition">Find a Store</a>
+        <a href="#" class="px-8 py-4 border border-ink text-sm font-semibold rounded-full hover:bg-ink hover:text-cream transition">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="bg-ink text-cream/70 pt-16 sm:pt-20">
+  <div class="mx-auto max-w-[1400px] px-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-14 border-b border-cream/10">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-2.5 mb-5">
+          <span class="w-10 h-10 bg-cream text-ink grid place-items-center font-display text-lg">I</span>
+          <span class="leading-none text-cream">
+            <span class="block font-display text-xl">Interio</span>
+            <span class="block text-[10px] tracking-[0.3em] uppercase text-cream/50">by Godrej</span>
+          </span>
+        </a>
+        <p class="text-sm leading-relaxed max-w-xs">A Godrej Enterprises Group brand. Furniture designed for Indian homes since 1966.</p>
+        <div class="flex gap-3 mt-6">
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full border border-cream/20 grid place-items-center hover:bg-gold hover:border-gold hover:text-white transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.5-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.7v8h3.5z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full border border-cream/20 grid place-items-center hover:bg-gold hover:border-gold hover:text-white transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7.4A4.6 4.6 0 1016.6 12 4.6 4.6 0 0012 7.4zm0 7.6A3 3 0 1115 12a3 3 0 01-3 3zm5.8-7.8a1.1 1.1 0 11-1.1-1.1 1.1 1.1 0 011.1 1.1zM21 7.2a5.3 5.3 0 00-1.5-3.7A5.3 5.3 0 0015.8 2C14.3 2 9.7 2 8.2 2a5.3 5.3 0 00-3.7 1.5A5.3 5.3 0 003 7.2C3 8.7 3 13.3 3 14.8a5.3 5.3 0 001.5 3.7A5.3 5.3 0 008.2 20c1.5.1 6.1.1 7.6 0a5.3 5.3 0 003.7-1.5 5.3 5.3 0 001.5-3.7c.1-1.5.1-6.1 0-7.6zm-1.9 9.2a3 3 0 01-1.7 1.7c-1.2.5-4 .4-5.4.4s-4.2.1-5.4-.4a3 3 0 01-1.7-1.7c-.5-1.2-.4-4-.4-5.4s-.1-4.2.4-5.4A3 3 0 016.6 5.5C7.8 5 10.6 5.1 12 5.1s4.2-.1 5.4.4a3 3 0 011.7 1.7c.5 1.2.4 4 .4 5.4s.1 4.2-.4 5.4z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-full border border-cream/20 grid place-items-center hover:bg-gold hover:border-gold hover:text-white transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2 26.6 26.6 0 002 12a26.6 26.6 0 00.4 4.8 2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8A26.6 26.6 0 0022 12a26.6 26.6 0 00-.4-4.8zM10 15V9l5.2 3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full border border-cream/20 grid place-items-center hover:bg-gold hover:border-gold hover:text-white transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 002.48 2.5A2.5 2.5 0 007.5 6a2.5 2.5 0 00-2.52-2.5zM3 9h4v12H3zM10 9h3.8v1.7h.1a4.2 4.2 0 013.8-2.1c4 0 4.8 2.6 4.8 6.1V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-cream text-sm font-semibold mb-4">About</p>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="about.html" class="hover:text-gold transition">About us</a></li>
+          <li><a href="about.html#collections" class="hover:text-gold transition">Our collection</a></li>
+          <li><a href="#" class="hover:text-gold transition">Design philosophy</a></li>
+          <li><a href="#" class="hover:text-gold transition">Sustainability</a></li>
+          <li><a href="#" class="hover:text-gold transition">Careers</a></li>
+          <li><a href="#" class="hover:text-gold transition">Interio in media</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-cream text-sm font-semibold mb-4">Help</p>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="about.html#faq" class="hover:text-gold transition">FAQ's</a></li>
+          <li><a href="#" class="hover:text-gold transition">Delivery &amp; shipment</a></li>
+          <li><a href="#" class="hover:text-gold transition">Warranty information</a></li>
+          <li><a href="#" class="hover:text-gold transition">Return &amp; replacement</a></li>
+          <li><a href="#" class="hover:text-gold transition">Terms &amp; conditions</a></li>
+          <li><a href="#" class="hover:text-gold transition">Payment</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-cream text-sm font-semibold mb-4">Contact</p>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-gold transition">Contact us</a></li>
+          <li><a href="#" class="hover:text-gold transition">Request a call back</a></li>
+          <li><a href="#" class="hover:text-gold transition">Store locator</a></li>
+          <li><a href="#" class="hover:text-gold transition">Become a dealer</a></li>
+          <li><a href="#" class="hover:text-gold transition">Services</a></li>
+        </ul>
+        <p class="mt-5 text-sm text-cream/50">Care: <a href="tel:08067436743" class="hover:text-gold">080-67436743</a></p>
+        <p class="text-sm text-cream/50"><a href="mailto:interiocare@godrej.com" class="hover:text-gold">interiocare@godrej.com</a></p>
+      </div>
+      <div>
+        <p class="text-cream text-sm font-semibold mb-4">Categories you love</p>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="living-room.html" class="hover:text-gold transition">Sofas &amp; loungers</a></li>
+          <li><a href="bedroom.html" class="hover:text-gold transition">Beds &amp; mattresses</a></li>
+          <li><a href="bedroom.html#wardrobes" class="hover:text-gold transition">Almirahs &amp; wardrobes</a></li>
+          <li><a href="index.html#categories" class="hover:text-gold transition">Dining sets</a></li>
+          <li><a href="#" class="hover:text-gold transition">Office chairs</a></li>
+          <li><a href="#" class="hover:text-gold transition">Modular kitchens</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="py-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/45">
+      <p>© Interio by Godrej, A Godrej Enterprises Group 2026</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-gold transition">Privacy policy</a>
+        <a href="#" class="hover:text-gold transition">Cookie policy</a>
+        <a href="#" class="hover:text-gold transition">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- toast -->
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 opacity-0 bg-ink text-cream text-sm px-6 py-3.5 rounded-full shadow-soft z-[70] transition-all duration-400 pointer-events-none"></div>
+
+<script>
+/* ---------- reveal on scroll ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+
+/* ---------- sticky header shadow ---------- */
+const header = document.getElementById('header');
+addEventListener('scroll', () => header.classList.toggle('shadow-soft', scrollY > 20), { passive: true });
+
+/* ---------- For Homes / For Businesses tabs ---------- */
+const b2bBar = document.getElementById('b2bBar');
+const switchTabs = document.querySelectorAll('.switch-tab');
+function paintSwitchTabs() {
+  switchTabs.forEach(t => { t.style.backgroundColor = t.classList.contains('active') ? '#141210' : 'transparent'; });
+}
+switchTabs.forEach(tab => {
+  tab.addEventListener('mouseenter', () => {
+    if (!tab.classList.contains('active')) tab.style.backgroundColor = 'rgba(168,129,76,.18)';
+  });
+  tab.addEventListener('mouseleave', () => {
+    if (!tab.classList.contains('active')) tab.style.backgroundColor = 'transparent';
+  });
+  tab.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const mode = this.dataset.mode;
+    const businessMenu = document.getElementById('businessMenu');
+    switchTabs.forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    if (mode === 'business') {
+      document.body.classList.add('mode-business');
+      if (b2bBar) b2bBar.classList.remove('hidden');
+      if (businessMenu) businessMenu.classList.toggle('hidden');
+      showToast('Shopping as: Business');
+    } else {
+      document.body.classList.remove('mode-business');
+      if (b2bBar) b2bBar.classList.add('hidden');
+      if (businessMenu) businessMenu.classList.add('hidden');
+      showToast('Shopping as: Home');
+    }
+    paintSwitchTabs();
+  });
+});
+document.addEventListener('click', e => {
+  const businessMenu = document.getElementById('businessMenu');
+  if (businessMenu && !e.target.closest('#modeSwitcher') && !e.target.closest('#businessMenu')) {
+    businessMenu.classList.add('hidden');
+  }
+});
+
+// Handle business menu links
+document.querySelectorAll('.business-menu-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const tab = this.dataset.tab;
+    if (tab) {
+      window.location.href = `index.html#categories`;
+      setTimeout(() => {
+        const targetBtn = document.querySelector(`#catTabs .tab-btn[data-tab="${tab}"]`);
+        if (targetBtn) targetBtn.click();
+      }, 500);
+    }
+  });
+});
+paintSwitchTabs();
+
+/* ---------- toast ---------- */
+const toast = document.getElementById('toast');
+let toastTimer;
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.remove('translate-y-24', 'opacity-0');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.add('translate-y-24', 'opacity-0'), 2200);
+}
+
+/* ---------- FAQ accordion ---------- */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('button');
+  const body = item.querySelector('.faq-body');
+  const icon = item.querySelector('.faq-icon');
+  btn.addEventListener('click', () => {
+    const open = !body.classList.contains('hidden');
+    document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+    document.querySelectorAll('.faq-icon').forEach(i => { i.textContent = '+'; i.classList.remove('bg-ink', 'text-cream', 'rotate-45'); });
+    if (!open) { body.classList.remove('hidden'); icon.textContent = '+'; icon.classList.add('rotate-45', 'bg-ink', 'text-cream'); }
+  });
+});
+</script>
+</body>
+</html>
